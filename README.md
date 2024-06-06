@@ -1,7 +1,7 @@
 
 # MADS Project Setup Guide
 
-# Laravel projekta iestatīšanas rokasgrāmata
+# LFC MADS projekta iestatīšanas rokasgrāmata
 
 Šī rokasgrāmata palīdzēs jums iestatīt MADS projektu, tostarp instalēt Composer, konfigurēt vides failu, migrēt un iesēt datubāzi, ģenerēt lietojumprogrammas atslēgu, pārvaldīt krātuvi un palaist izstrādes serveri.
 
