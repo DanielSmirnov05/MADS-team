@@ -8,7 +8,8 @@
 # Izstrādei izmantotie rīki
 
 - HTML
-- CSS (ar Tailwind Css)
+- CSS
+- Java Script
 - Laravels
 - VsCode
 - Laragons
