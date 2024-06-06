@@ -1,83 +1,84 @@
 
 # MADS Project Setup Guide
 
-This guide will walk you through setting up a Laravel project, including installing Composer, configuring the environment file, migrating and seeding the database, generating an application key, managing storage, and running the development server.
+# Laravel projekta iestatīšanas rokasgrāmata
 
-# Tools used for development
+Šī rokasgrāmata palīdzēs jums iestatīt MADS projektu, tostarp instalēt Composer, konfigurēt vides failu, migrēt un iesēt datubāzi, ģenerēt lietojumprogrammas atslēgu, pārvaldīt krātuvi un palaist izstrādes serveri.
+
+# Izstrādei izmantotie rīki
 
 - HTML
-- CSS (with Tailwind Css)
-- Laravel
+- CSS (ar Tailwind Css)
+- Laravels
 - VsCode
-- Laragon
+- Laragons
 
-## Prerequisites
+## Priekšnoteikumi
+- Players
+- MySQL vai cita datu bāze, ko atbalsta Laravel
 
-- Composer
-- MySQL or another database supported by Laravel
+## 1. darbība. Instalējiet programmu Composer
 
-## Step 1: Install Composer
-
-Composer is a dependency manager for PHP. If you haven't installed Composer yet, download and install it from [getcomposer.org]( https://getcomposer.org).
-
-To install Composer dependencies in your project, run the following command in your project directory:
+Lai projektā instalētu komponista atkarības, projekta direktorijā palaidiet šādu komandu:
 ```
-composer install
+komponista instalēšana
 ```
-## Step 2: Create .env File
+## 2. darbība. Izveidojiet .env failu
 
-The .env file contains environment-specific configuration, such as database connection details. Copy the .env.example file to create a new .env file:
+.env failā ir ietverta videi specifiska konfigurācija, piemēram, datu bāzes savienojuma informācija. Kopējiet failu .env.example, lai izveidotu jaunu .env failu:
 ```
 cp .env.example .env
 ```
-Next, edit the .env file to configure your database connection:
+Pēc tam rediģējiet .env failu, lai konfigurētu datu bāzes savienojumu:
 
 - DB_CONNECTION=mysql
 - DB_HOST=127.0.0.1
 - DB_PORT=3306
+- DB_DATABASE=jūsu_datubāzes_nosaukums
+- DB_USERNAME=jūsu_datubāzes_lietotājs
+- DB_PASSWORD=jūsu_datubāzes_parole
 
-## Step 3: Migrate and Seed the Database
+## 3. darbība. Migrējiet un izveidojiet datu bāzi
 
-To run the database migrations and seed the database with test data, use the following Artisan command:
+Lai palaistu datu bāzes migrāciju un ievadītu datu bāzi ar testa datiem, izmantojiet šo Artisan komandu:
 ```
-This command will reset the database and run all migrations, then seed it with test data.
+Šī komanda atiestatīs datu bāzi un veiks visas migrācijas, pēc tam pievienos tai testa datus.
 
-## Step 4: Generate Application Key
+## 4. darbība: ģenerējiet lietojumprogrammas atslēgu
 
-Laravel requires an application key, which is used for encryption. Generate the application key by running:
+Laravel nepieciešama lietojumprogrammas atslēga, kas tiek izmantota šifrēšanai. Ģenerējiet lietojumprogrammas atslēgu, izpildot:
 ```
+php artisan atslēga: ģenerēt
+```
+Šī komanda atjauninās APP_KEY vērtību jūsu .env failā.
 
-This command will update the APP_KEY value in your .env file.
+## 5. darbība. Pārvietojiet mapi album_covers
 
-## Step 5: Move album_covers Folder
-
-Move the album_covers folder to the storage/app/public directory. You can use the following command:
+Pārvietojiet mapi album_covers uz krātuves/lietotnes/publisko direktoriju. Varat izmantot šādu komandu:
 ```
 mv path/to/album_covers storage/app/public/
 ```
-Make sure to replace path/to/album_covers with the actual path to your album_covers folder.
+Noteikti aizstājiet ceļu/to/album_covers ar faktisko ceļu uz mapi album_covers.
 
-## Step 6: Link Storage to Public Folder
+## 6. darbība. Saistiet krātuvi ar publisko mapi
 
-To create a symbolic link from storage/app/public to public/storage, run the following Artisan command:
+Lai izveidotu simbolisku saiti no krātuves/lietotnes/publisku uz publisko/krātuvi, palaidiet šo Artisan komandu:
 ```
-php artisan storage:link
-```
-This command allows you to access the files in storage/app/public from the public directory.
+Šī komanda ļauj piekļūt failiem krātuvē/lietotnē/publiskajā no publiskā direktorija.
 
-## Step 7: Run the Development Server
+## 7. darbība: palaidiet izstrādes serveri
 
-To start the Laravel development server, run the following command:
+Lai palaistu Laravel izstrādes serveri, palaidiet šādu komandu:
 ```
-php artisan serve
+php artisan kalpo
 ```
-This command will start a local development server at http://127.0.0.1:8000.
+Šī komanda sāks vietējās izstrādes serveri vietnē http://127.0.0.1:8000.
 
-## 5 Test cases
-| **Test Case ID** | **Controller** | **Method** | **Test Description** | **Expected Outcome** | **Result** |
-|------------------|------------------|-----------------------|------------------------------------------------------------------|------------------------------------------------------------------|------------|
-| TC01 | AlbumController | index | Verify that the index method retrieves the newest and best-selling albums | The method should return the correct view with newest and best-selling albums | Passed |
-| TC02 | AlbumController | sort | Verify that the sort method sorts albums by title in ascending order | The method should return the albums sorted by title in ascending order | Passed |
-| TC03 | CommentController| storeComment | Verify that a comment can be successfully added to an album | The comment should be added to the database, and the view should show the comment | Passed |
-| TC04 | OrderController | showLibrary | Verify that the showLibrary method retrieves the authenticated user's orders | The method should return the correct view with the user's orders | Passed |
-| TC05 | UserController | store | Verify that a new user can be successfully registered | The user should be added to the database, logged in, and redirected to the homepage | Passed |
+## 5 Testa gadījumi
+| **Pārbaudes gadījuma ID** | ** Kontrolieris** | **Metode** | **Pārbaudes apraksts** | **Paredzamais rezultāts** | **Rezultāts** |
+|------------------|------------------|------------ ------------|-------------------------------------- -----------------------------|--------------------- -----------------------------------------------|--- ---------|
+| TC01 | AlbumController | indekss | Pārbaudiet, vai indeksa metode izgūst jaunākos un vislabāk pārdotos albumus | Metodei ir jāatgriež pareizais skats ar jaunākajiem un vislabāk pārdotajiem albumiem | Nokārtots |
+| TC02 | AlbumController | šķirot | Pārbaudiet, vai kārtošanas metode kārto albumus pēc nosaukuma augošā secībā | Metodei ir jāatgriež albumi, kas sakārtoti pēc nosaukuma augošā secībā | Nokārtots |
+| TC03 | CommentController| veikalsKomentārs | Pārbaudiet, vai komentāru var veiksmīgi pievienot albumam | Komentārs jāpievieno datu bāzei, un skatā jāparāda komentārs | Nokārtots |
+| TC04 | OrderController | parādītBibliotēka | Pārbaudiet, vai metode showLibrary izgūst autentificētā lietotāja pasūtījumus | Metodei ir jāatgriež pareizais skats ar lietotāja pasūtījumiem | Nokārtots |
+| TC05 | UserController | veikals | Pārbaudiet, vai jaunu lietotāju var veiksmīgi reģistrēt | Lietotājs jāpievieno datu bāzei, jāpiesakās un jānovirza uz sākumlapu | Nokārtots |
