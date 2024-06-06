@@ -74,11 +74,11 @@ php artisan kalpo
 ```
 Šī komanda sāks vietējās izstrādes serveri vietnē http://127.0.0.1:8000.
 
-## 5 Testa gadījumi
-| **Pārbaudes gadījuma ID** | ** Kontrolieris** | **Metode** | **Pārbaudes apraksts** | **Paredzamais rezultāts** | **Rezultāts** |
-|------------------|------------------|------------ ------------|-------------------------------------- -----------------------------|--------------------- -----------------------------------------------|--- ---------|
-| TC01 | AlbumController | indekss | Pārbaudiet, vai indeksa metode izgūst jaunākos un vislabāk pārdotos albumus | Metodei ir jāatgriež pareizais skats ar jaunākajiem un vislabāk pārdotajiem albumiem | Nokārtots |
-| TC02 | AlbumController | šķirot | Pārbaudiet, vai kārtošanas metode kārto albumus pēc nosaukuma augošā secībā | Metodei ir jāatgriež albumi, kas sakārtoti pēc nosaukuma augošā secībā | Nokārtots |
-| TC03 | CommentController| veikalsKomentārs | Pārbaudiet, vai komentāru var veiksmīgi pievienot albumam | Komentārs jāpievieno datu bāzei, un skatā jāparāda komentārs | Nokārtots |
-| TC04 | OrderController | parādītBibliotēka | Pārbaudiet, vai metode showLibrary izgūst autentificētā lietotāja pasūtījumus | Metodei ir jāatgriež pareizais skats ar lietotāja pasūtījumiem | Nokārtots |
-| TC05 | UserController | veikals | Pārbaudiet, vai jaunu lietotāju var veiksmīgi reģistrēt | Lietotājs jāpievieno datu bāzei, jāpiesakās un jānovirza uz sākumlapu | Nokārtots |
+## 5 Test cases
+| **Test Case ID** | **Controller** | **Method** | **Test Description** | **Expected Outcome** | **Result** |
+|------------------|------------------|-----------------------|------------------------------------------------------------------|------------------------------------------------------------------|------------|
+| TC01 | AlbumController | index | Verify that the index method retrieves the newest and best-selling albums | The method should return the correct view with newest and best-selling albums | Passed |
+| TC02 | AlbumController | sort | Verify that the sort method sorts albums by title in ascending order | The method should return the albums sorted by title in ascending order | Passed |
+| TC03 | CommentController| storeComment | Verify that a comment can be successfully added to an album | The comment should be added to the database, and the view should show the comment | Passed |
+| TC04 | OrderController | showLibrary | Verify that the showLibrary method retrieves the authenticated user's orders | The method should return the correct view with the user's orders | Passed |
+| TC05 | UserController | store | Verify that a new user can be successfully registered | The user should be added to the database, logged in, and redirected to the homepage | Passed |
