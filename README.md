@@ -1,6 +1,8 @@
 
 # MADS Project Setup Guide
 
+Media football team in Latvia!
+
 # LFC MADS projekta iestatīšanas rokasgrāmata
 
 Šī rokasgrāmata palīdzēs jums iestatīt MADS projektu, tostarp instalēt Composer, konfigurēt vides failu, migrēt un iesēt datubāzi, ģenerēt lietojumprogrammas atslēgu, pārvaldīt krātuvi un palaist izstrādes serveri.
