@@ -78,7 +78,7 @@ php artisan kalpo
 | **Test Case ID** | **Controller** | **Method** | **Test Description** | **Expected Outcome** | **Result** |
 |------------------|------------------|-----------------------|------------------------------------------------------------------|------------------------------------------------------------------|------------|
 | T1 | AlbumController | index | Verify that the index method retrieves the newest and best-selling albums | The method should return the correct view with newest and best-selling albums | Passed |
-| T2 | OrderController | showLibrary | Verify that the showLibrary method retrieves the authenticated user's orders | The method should return the correct view with the user's orders | Passed |
-| T3 | UserController | store | Verify that a new user can be successfully registered | The user should be added to the database, logged in, and redirected to the homepage | Passed |
+| T2 | OrderController | players | Verify that the showLibrary method retrieves the authenticated user's orders | The method should return the correct view with the user's orders | Passed |
+| T3 | UserController | images | Verify that a new user can be successfully registered | The user should be added to the database, logged in, and redirected to the homepage | Passed |
 | T4 | AlbumController | sort | Verify that the sort method sorts albums by title in ascending order | The method should return the albums sorted by title in ascending order | Passed |
-| T5 | CommentController| storeComment | Verify that a comment can be successfully added to an album | The comment should be added to the database, and the view should show the comment | Passed |
+| T5 | CommentController| goals scorers | Verify that a comment can be successfully added to an album | The comment should be added to the database, and the view should show the comment | Passed |
