@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГЛАВНАЯ СТРАНИЦА</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/MADS_LOGO_BLACK.png" alt="Логотип сайта"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="calendar.html">CALENDAR</a></li>
+                <li><a href="results.html">RESULTS</a></li>
+                <li><a href="team.html">TEAM</a></li>
+                <li><a href="media.html">MEDIA</a></li>
+                <li><a href="photo.html">PHOTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content-news">
+            <div class="team-images">
+                <img src="images/2024-06-09 - MADS vs IMANTA4 2.png" alt="Markus">
+            </div>
+        </div>
+        <div class="content-news">
+            <div class="team-images">
+                <img src="images/2024-06-09 - MADS vs IMANTA-4 Photo.png" alt="Markus">
+            </div>
+        </div>
+        <div class="content-news">
+            <div class="team-images">
+                <img src="images/MADS SEVELOVS.jpg" alt="Igors">
+                <img src="images/MADS GODAINIS.jpg" alt="Duhovka">
+                <img src="images/MADS MOMOTS.jpg" alt="Momots">
+            </div>
+        </div>
+        <div class="content-news">
+            <div class="team-images">
+                <img src="images/GHETTO 2024-06-05 2.png" alt="Markus">
+            </div>
+        </div>
+        <div class="content-news">
+            <div class="team-images">
+                <img src="images/GHETTO 2024-06-05.png" alt="Markus">
+            </div>
+        </div>
+        <div class="content-news">
+            <div class="team-images">
+                <img src="images/GHETTO 2024-06-02.png" alt="Markus">
+            </div>
+        </div>
+        <div class="content-news">
+            <div class="team-images">
+                <img src="images/GHETTO 2024-06-02 Photo.png" alt="Markus">
+            </div>
+        </div>
+        <div class="content-news">
+            <div class="team-images">
+                <img src="images/GHETTO 2024-06-02.png" alt="Markus">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="first-part">
+            <div class="social-media">
+                <a href="#"><img src="images/YouTube_Logo_White.png" alt="YouTube"></a>
+                <a href="#"><img src="images/TikTok_Logo_White.png" alt="TikTok"></a>
+                <a href="#"><img src="images/Telegram_Logo_White.png" alt="Telegram"></a>
+                <a href="#"><img src="images/Instagram_Logo_White.png" alt="Instagram"></a>
+            </div>
+            <div class="media-sponsors">
+                <img src="images/MYREALITY LOGO S.png" alt="Sponsor 1">
+                <img src="images/RAZOOMOV JEWELRY LOGO S.png" alt="Sponsor 2">
+            </div>
+        </div>
+        <hr class="separator"> <!-- Белая линия разделения -->
+        <div class="second-part">
+            <nav>
+                <ul>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="photo.html">Photo</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p>© 2024 MADS</p>
+    </footer>
+    
+    <script>
+        // JavaScript для выделения текущей страницы
+        const currentLocation = location.href;
+        const navLinks = document.querySelectorAll('nav ul li a');
+        const navLength = navLinks.length;
+    
+        for (let i = 0; i < navLength; i++) {
+            // Проверяем, если текущая страница - index.html и ссылка на новости
+            // Делаем ссылку на новости жирной
+            if (currentLocation.includes('index.html') && navLinks[i].href.includes('news.html')) {
+                navLinks[i].classList.add('active');
+            }
+            // Для всех остальных страниц делаем то же самое, что и прежде
+            else if (navLinks[i].href === currentLocation) {
+                navLinks[i].classList.add('active');
+            }
+        }
+    </script>
+    
+</body>
+</html>
+
+

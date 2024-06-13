@@ -1,0 +1,260 @@
+/* Общие стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #053128; /* Цвет фона */
+    color: white; /* Цвет текста */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: white; /* Цвет фона для header */
+    color: black; /* Цвет текста для header */
+    padding: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc; /* Нижняя граница */
+}
+
+.logo img {
+    height: 50px;
+    margin-left: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: black; /* Цвет текста в навигации */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для main */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.black-bar {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 3em 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.black-bar h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.content {
+    background-color: #053128;
+    color: white;
+    padding: 2em;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.content-news {
+    background-color: #053128;
+    color: white;
+    padding: 2em;
+    width: 400%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.team-images {
+    display: flex;
+    justify-content: center;
+    gap: 1cm;
+}
+
+.team-images img {
+    width: 200px; /* Установите фиксированную ширину для изображений */
+    height: auto;
+}
+
+.media-team-images {
+    display: flex;
+    justify-content: center;
+    gap: 1cm;
+}
+
+.media-team-images img {
+    width: 350px; /* Установите фиксированную ширину для изображений */
+    height: auto;
+}
+
+.results-team-images {
+    display: flex;
+    justify-content: center;
+    gap: 0cm; /* Отступ между изображениями */
+}
+
+.results-team-images img {
+    width: 600px; /* Установите фиксированную ширину для изображений */
+    height: auto;
+}
+
+/* Стили для footer */
+footer {
+    background-color: #000; /* Черный фон для footer */
+    color: #fff; /* Белый текст */
+    text-align: center;
+    padding: 1em 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    font-size: smaller; /* Меньший размер шрифта */
+    margin-top: 50px; /* Отступ сверху */
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    margin-right: 40px; /* Отступ справа */
+}
+
+.social-media a {
+    color: #fff; /* Белый цвет текста */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-media a img {
+    width: 60px; /* Ширина логотипов */
+    height: auto; /* Автоматическое масштабирование высоты */
+    margin-right: 20px; /* Отступ междуже логотипами */
+}
+
+.media-sponsors {
+    display: flex;
+    align-items: center;
+    margin-left: 40px; /* Отступ слева */
+}
+
+.media-sponsors img {
+    width: 120px; /* Ширина логотипов спонсоров */
+    height: auto; /* Автоматическое масштабирование высоты */
+    margin-left: 50px; /* Отступ между логотипами спонсоров */
+    align-self: center; /* Выравнивание по центру по вертикали */
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+.first-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px; /* Отступ между первой и второй частью footer */
+}
+
+.social-media,
+.media-sponsors {
+    margin: 10px 0; /* Отступ между элементами в первой части */
+}
+
+.separator {
+    width: 100%; /* Ширина линии разделения */
+    border-top: 1px solid #053128; /* Цвет разделительной линии */
+    margin: 60px 0; /* Отступ сверху и снизу */
+}
+
+.second-part ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Убираем отступы у списка */
+    display: flex;
+    flex-wrap: wrap; /* Разрешаем перенос на новую строку */
+    justify-content: center; /* Выравнивание по центру */
+    gap: 1em; /* Отступ между элементами списка */
+}
+
+.second-part ul li {
+    margin: 0;
+}
+
+.second-part ul li a {
+    color: white; /* Белый цвет текста */
+    text-decoration: none;
+    font-size: 1em; /* Размер шрифта */
+    text-transform: uppercase; /* Преобразование текста в верхний регистр */
+}
+
+.second-part ul li a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+.second-part {
+    margin-bottom: 1em; /* Отступ снизу */
+}
+
+.second-part p {
+    font-size: smaller; /* Меньший размер шрифта */
+    margin: 0; /* Убираем отступы */
+}
+
+.youtube-video {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.youtube-video iframe {
+    width: 100%;
+    height: auto;
+}
+
